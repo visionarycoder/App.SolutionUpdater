@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="vs.Architect.Client.SolutionMinder.ConsoleApp" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RecentSolutions" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SolutionExtension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.sln</Value>
+    </Setting>
+    <Setting Name="IncludeProjects" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Access|Engine|Manager</Value>
+    </Setting>
+    <Setting Name="ExcludeProjects" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ifx,Microservice</Value>
+    </Setting>
+    <Setting Name="MaxRecentSolutions" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="RecentSolutionsOption" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Choose from recent solutions</Value>
+    </Setting>
+    <Setting Name="BrowseOption" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Browse to a new solution</Value>
+    </Setting>
+    <Setting Name="MainMenuOption" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Return to main menu</Value>
+    </Setting>
+    <Setting Name="ExitOption" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Exit</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

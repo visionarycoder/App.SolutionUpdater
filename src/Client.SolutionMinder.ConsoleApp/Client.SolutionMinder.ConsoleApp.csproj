@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>vs.Architect.Client.SolutionMinder.ConsoleApp</RootNamespace>
+        <LangVersion>latest</LangVersion>
+        <AnalysisLevel>latest-minimum</AnalysisLevel>
+        <Authors>Ivan Jones</Authors>
+        <Company>Visionary Coder</Company>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.12.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.12.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.1" />
+        <PackageReference Include="Roslynator.Analyzers" Version="4.12.10">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Roslynator.CSharp.Workspaces" Version="4.12.10" />
+        <PackageReference Include="Roslynator.Refactorings" Version="4.12.10">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Roslynator.Workspaces.Core" Version="4.12.10" />
+        <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.1" />
+        <PackageReference Include="System.Text.Json" Version="9.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Settings.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Settings.settings</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+
+</Project>
