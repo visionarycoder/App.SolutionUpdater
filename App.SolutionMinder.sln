@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3741D3DB-4135-424B-8F3D-93DDC38B39F5}"
+	ProjectSection(SolutionItems) = preProject
+		src\ReadMe.md = src\ReadMe.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBB4AC2B-AE42-4637-B6D7-AE92C85DC09F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionMinderApp", "src\SolutionMinderApp\SolutionMinderApp.csproj", "{BB99F6B8-0508-48BA-A3EE-2A3DFB030D90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB99F6B8-0508-48BA-A3EE-2A3DFB030D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB99F6B8-0508-48BA-A3EE-2A3DFB030D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB99F6B8-0508-48BA-A3EE-2A3DFB030D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB99F6B8-0508-48BA-A3EE-2A3DFB030D90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB99F6B8-0508-48BA-A3EE-2A3DFB030D90} = {3741D3DB-4135-424B-8F3D-93DDC38B39F5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		FileExplorer = docs\|gfx\|src\|tests\
+		SolutionGuid = {21F0F0A0-DB77-4D0D-834D-3863113E788A}
+	EndGlobalSection
+EndGlobal

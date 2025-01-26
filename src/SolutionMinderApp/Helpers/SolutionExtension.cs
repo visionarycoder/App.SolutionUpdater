@@ -2,7 +2,7 @@
 
 public static class SolutionExtension
 {
-    public static bool IsSolution(this FileInfo fileInfo, string extension)
+    public static bool HasMatchingExtension(this FileInfo fileInfo, string extension)
     {
         return fileInfo.Exists && fileInfo.Extension.Equals(extension, StringComparison.OrdinalIgnoreCase);
     }

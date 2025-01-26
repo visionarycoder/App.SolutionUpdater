@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace vs.Architect.Client.SolutionMinder.ConsoleApp.Helpers;
+﻿namespace vs.Architect.Client.SolutionMinder.ConsoleApp.Helpers;
 
 public class SolutionSelector
 {
@@ -26,21 +24,20 @@ public class SolutionSelector
             options.Add(browseForFileOption);
             options.Add(exitOption);
 
-            var solutionPath = string.Empty;
             var choice = ShowMenu("Select an option:", options);
             switch(options[choice])
             {
                 case var selectedOption when selectedOption == recentSolutionsOption && recentSolutions.Count > 0:
                 {
                     var (selection, option) = SelectFromRecentSolutions();
-                    if(option != SelectionOption.Exit && selection!.IsSolution(solutionExtension))
+                    if(option != SelectionOption.Exit && selection!.HasMatchingExtension(solutionExtension))
                         return (selection, SelectionOption.Select);
                     continue;
                 }
                 case var selectedOption when selectedOption == browseForFileOption:
                 {
                     var (selection, option) = BrowseForFile(solutionExtension);
-                    if(option != SelectionOption.Exit && selection!.IsSolution(solutionExtension))
+                    if(option != SelectionOption.Exit && selection!.HasMatchingExtension(solutionExtension))
                     {
                         if(!recentSolutions.Contains(selection!.FullName))
                         {
@@ -113,7 +110,7 @@ public class SolutionSelector
                 case { Option: SelectionOption.Exit }:
                     return (options[idx].File, options[idx].Option);
                 case { Option: SelectionOption.Select }:
-                    if(options[idx].File is not null && options[idx].File!.IsSolution(fileExtension))
+                    if(options[idx].File is not null && options[idx].File!.HasMatchingExtension(fileExtension))
                         return (options[idx].File, options[idx].Option);
                     Console.WriteLine("Invalid file.");
                     currentDir = options[idx].Dir;
